@@ -32,5 +32,85 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.logo:hover {
+  animation-name: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 15px;
+  animation-name: moveToLeft;
+  animation-duration: 1s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 10px;
+  animation-name: moveToRight;
+  animation-duration: 1s;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80% {
+    opacity: 0.9;
+    transform: translate(20px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+
+  80% {
+    opacity: 0.9;
+    transform: translate(-20px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(0);
+  }
 }
